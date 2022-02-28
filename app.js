@@ -1,0 +1,15 @@
+const header = document.querySelector("h1");
+const button = document.querySelector("button");
+
+const randomColor = () => {
+	const r = Math.floor(Math.random() * 255);
+	const g = Math.floor(Math.random() * 255);
+	const b = Math.floor(Math.random() * 255);
+
+	return `rgb(${r}, ${g}, ${b})`;
+};
+
+button.addEventListener("click", function() {
+	document.body.style.backgroundColor = randomColor();
+	header.textContent = randomColor();
+});
